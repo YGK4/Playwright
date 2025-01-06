@@ -24,6 +24,7 @@ package playWrightSteps;
 	    public void iNavigateTo(String url) {
 	        // Navigate to the specified URL
 	        page.navigate("https://testautomationpractice.blogspot.com/");
+	        
 	    }
 
 	    @Then("I verify the page title is {string}")
@@ -34,7 +35,7 @@ package playWrightSteps;
 	        if (!actualTitle.equals("Automation Testing Practice")) {
 	            throw new AssertionError("Expectedtext: " + expectedTitle + ", but got: " + actualTitle);
 	        }
-	        System.out.println("Page title verified successfully: " + actualTitle);
+	        
 
 	        // Cleanup: Close the browser
 	        browser.close();
